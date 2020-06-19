@@ -2,8 +2,7 @@
 # Some NLP. Assumes 01_webscrape_site.R been run
 ################################################################################
 
-library(ngram)
-
+library(ngrams) # for text analysis (Natural Language Processing NLP)
 
 # bigrams -----------------------------------------------------------------
 

@@ -1,25 +1,23 @@
 ################################################################################
-# Scarping the OSR website. This script creates theme_tbl and letters_tbl
+# Scraping the UKSA website. This script creates theme_tbl and letters_tbl
 ################################################################################
 
 # packages ----------------------------------------------------------------
 library(rvest) # for getting html data
 library(tidyverse) # for data wrangling 
-library(rebus) # for human-readable regex
 library(lubridate) # for date wrangling
-library(ngrams) # for text analysis (Natural Language Processing NLP)
 
 
 # scrape set up ------------------------------------------------------------------
 
 base_url <- "https://www.statisticsauthority.gov.uk/correspondence-list/"
 # read in the data
-osr_homepage <- read_html(base_url)
+uksa_homepage <- read_html(base_url)
 
 # correspondence by theme -------------------------------------------------
 
 # get the filter options from the selector on the left of the webpage
-all_filter_options <- html_nodes(osr_homepage,css = '.form-control')
+all_filter_options <- html_nodes(uksa_homepage,css = '.form-control')
 # manual step that the theme dropdown is the fourth in the list
 theme_options <- all_filter_options[[4]]
 # go a level deeper

@@ -46,7 +46,7 @@ yearly_plot <- ggplot(yearly_correspondence, aes(x=year, y=n, fill=before_today_
   geom_bar(stat="identity") + 
   theme_bw() +
   scale_fill_manual(values = c("#17e33f","#007818")) +
-  labs(title = paste0("OSR correspondences",
+  labs(title = paste0("UKSA correspondences",
                       "\nfilled by whether before ",
                       d, " ", m," in each year"),
        x = "Year",
